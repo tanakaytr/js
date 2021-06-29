@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<script>
+function inputCheck(){
+  var htmlstr = "";
+  
+  htmlstr += document.getElementById("contents").innerHTML;
+    
+  document.getElementById("target").innerHTML = htmlstr;
+}
+
+</script>
+</head>
+<body>
+<div><input type="button" id="start" value="スタート" onclick="inputCheck();" /></div>
+<div id="contents">こんにちは</div>
+<div id="target"></div>
+</body>
+</html>

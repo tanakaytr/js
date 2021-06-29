@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<style>
+div {
+  margin : 10px;
+  padding : 10px;
+  width : 50px;
+  height : 50px;
+  border : 1px solid white;
+  line-height : 50px;
+  float : left;
+  text-align : center;
+  color : white;
+}
+#red {background-color : red;}
+#green {background-color : green;}
+#blue {background-color : blue;}
+#black {background-color : black;}
+</style>
+<script>
+window.onload = function() {
+  var colors = ['red', 'green', 'blue', 'black'];
+  for (var i in colors) {
+    document.getElementById(colors[i]).onmouseover = change;
+    document.getElementById(colors[i]).onmouseout = mouseout;
+  }
+};
+
+function change() {
+  document.body.style.backgroundColor = this.id;
+}
+function mouseout() {
+  document.body.style.backgroundColor = "white";
+}
+</script>
+</head>
+<body>
+<div id="red">赤</div>
+<div id="green">緑</div>
+<div id="blue">青</div>
+<div id="black">黒</div>
+</body>
+</html>

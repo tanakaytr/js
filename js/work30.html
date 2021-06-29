@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<script>
+function timeup(){
+  var myTimer = document.getElementById("count").value;
+  var count = setInterval(output, 1000);
+  function output(){
+    myTimer--;
+    if(myTimer == 0){
+      clearInterval(count);
+      document.getElementById("message").innerHTML = "タイムアップ";
+    }
+  }
+
+}
+</script>
+</head>
+<body>
+<input type="text" id="count" value="10" />
+<input type="button" id="start" value="スタート" onclick="timeup();" />
+<div id="message"></div>
+</body>
+</html>

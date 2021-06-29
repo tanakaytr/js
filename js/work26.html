@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<script>
+function inputCheck(){
+  var a = document.getElementById("value_a").value;
+  var b = document.getElementById("value_b").value;
+  if(a > b){
+    document.getElementById("answer").value = a;
+  } else {
+    document.getElementById("answer").value = b;
+  }
+}
+</script>
+</head>
+<body>
+<table>
+<tr>
+<td><input type=~text" id="value_a" size="4" /></td>
+<td><input type="text" id="value_b" size="4" /></td>
+<td><input type="button" id="btn" value="大きい値は？" onclick="inputCheck();" /></td>
+</tr>
+</table>
+<div>大きい値は:<input type="text" id="answer" /></div>
+</body>
+</html>

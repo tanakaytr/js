@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<script>
+function inputCheck(){
+  if(isNaN(document.getElementById("age").value)){
+    document.getElementById("result").value = "数値を入力してください";
+  } else if(document.getElementById("age").value >= 20){
+    document.getElementById("result").value = "20歳以上です";
+  } else if(document.getElementById("age").value < 20){
+    document.getElementById("result").value = "20歳未満です";
+  }
+}
+
+</script>
+</head>
+<body>
+<table>
+<tr><td>年齢</td><td><input type="text" id="age"  /></td></tr>
+<tr><td>結果</td><td><input type="text" id="result"  /></td></tr>
+<tr><td colspan="2"><input type="button" id="btn" value="実行" onclick="inputCheck();" /></td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<script>
+function inputCheck(){
+  var htmlstr = "";
+  for(var i = 0; i < document.getElementById("loop").value; i++){
+    htmlstr += document.getElementById("message").value + '<br>';
+    
+  }
+  document.getElementById("result").innerHTML = htmlstr;
+};
+
+</script>
+</head>
+<body>
+<div>メッセージ<input type="text" id="message" /></div>
+<div>繰り返し回数<input type="text" id="loop" /></div>
+<div><input type="button" id="start" value="スタート" onclick="inputCheck();" /></div>
+<div id="result"></div>
+</body>
+</html>

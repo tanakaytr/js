@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<script>
+var urls = {
+  'yahoo' : 'http://www.yahoo.co.jp/',
+  'google' : 'http://www.google.co.jp/',
+  'amazon' : 'http://www.amazon.co.jp/'
+}
+function inputCheck(){
+  
+  var url = document.getElementById("url").value;
+  
+  location.href = urls[url];
+}
+</script>
+</head>
+<body>
+<div>
+<select id="url">
+<option value="">選択してください</option>
+<option value="yahoo">yahoo</option>
+<option value="google">Google</option>
+<option value="amazon">Amazon</option>
+</select>
+<input type="button" id="btn" value="移動" onclick="inputCheck();" />
+</div>
+</body>
+</html>

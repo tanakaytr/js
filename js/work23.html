@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<script>
+function inputCheck(){
+  var htmlstr1 = "";
+  var htmlstr2 = "";
+  var htmlstr3 = "";
+  
+  htmlstr1 += document.getElementById("name").value + '<br>';
+  htmlstr2 += document.getElementById("age").value + '<br>';
+  htmlstr3 += document.getElementById("hobby").value + '<br>';
+    
+  document.getElementById("target").innerHTML = "名前：" + htmlstr1
+  + "年齢：" + htmlstr2 + "趣味：" + htmlstr3;
+}
+
+</script>
+</head>
+<body>
+<table border="1">
+<tr><th>名前</th><td><input type="text" id="name" /></td></tr>
+<tr><th>年齢</th><td><input type="text" id="age" /></td></tr>
+<tr><th>趣味</th><td><input type="text" id="hobby" /></td></tr>
+</table>
+<div><input type="button" id="start" value="スタート" onclick="inputCheck();" /></div>
+<div id="target"></div>
+</body>
+</html>

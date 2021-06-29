@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ワーク</title>
+<style>
+#display, #control{
+  text-align : center;
+}
+#image{
+  width : 100px;
+  height : 100px;
+}
+</style>
+<script>
+var images = [];
+images[0] = "http://no1s.biz/kenshu/image/weather001.png";
+images[1] = "http://no1s.biz/kenshu/image/weather002.png";
+images[2] = "http://no1s.biz/kenshu/image/weather003.png";
+images[3] = "http://no1s.biz/kenshu/image/weather004.png";
+
+var index = 0;
+function prevcheck(){
+  if(index == 0){
+  index = 3;
+  } else {
+    index--;
+  }
+  document.getElementById("image").src = images[index];
+}
+function nextcheck(){
+  if(index == 3){
+  index = 0;
+  } else {
+  index++;
+  }
+  document.getElementById("image").src = images[index];
+}
+</script>
+</head>
+<body>
+<div id="display"><img src="http://no1s.biz/kenshu/image/weather001.png" id="image" /></div>
+<div id="control">
+<input type="button" id="prev" value="戻る" onclick="prevcheck();" />
+<input type="button" id="next" value="次へ" onclick="nextcheck();" />
+</div>
+</body>
+</html>
